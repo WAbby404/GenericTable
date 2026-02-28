@@ -1,0 +1,321 @@
+.users-table-container {
+    width: 100%;
+    scrollbar-gutter: stable;
+    background-color: var(--background-primary);
+    border: 1px solid #E9EAEB;
+    background: var(--background-primary);
+    border-radius: 0.7rem;
+}
+
+/* Users Table Header START */
+.users-table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 1rem;
+    position: sticky;
+    border-bottom: 1px solid #E9EAEB;
+}
+
+.users-table-header-info {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.users-table-header-info2 {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.user-search-container {
+    padding-top: 0.20rem;
+}
+
+.users-table-header-info h3 {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+}
+
+.users-table-header-count {
+    border-radius: 624.9375rem;
+    border: 1px solid #C8E9FE;
+    background: #F5FBFF;
+    display: flex;
+    padding: 0.125rem 0.5rem;
+    align-items: center;
+    color: #0962A4;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+}
+
+/* Users Table Header widths */
+.users-table-widths-1 {
+    width: 25%;
+}
+
+.users-table-widths-2 {
+    width: 18%;
+}
+
+.users-table-widths-3 {
+    width: 18%;
+}
+
+.users-table-widths-4 {
+    width: 18%;
+}
+
+.users-table-widths-5 {
+    width: 18%;
+}
+
+.users-table-widths-6 {
+    width: 10rem;
+}
+
+.users-table-sortable {
+    cursor: pointer;
+}
+
+.users-table-header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.25rem;
+}
+
+.users-table-sortable:hover {
+    background: var(--background-secondary);
+}
+/* Users Table Header END */
+
+/* Users Table START */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .users-table th {
+        text-align: left;
+        padding: 0.75rem 0;
+        align-items: center;
+        gap: 0.75rem;
+        align-self: stretch;
+        background: #FAFAFA;
+        border-bottom: 1px solid #E9EAEB;
+        color: #717680;
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1.125rem;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    }
+
+    .users-table tbody {
+        display: block;
+        overflow-y: auto;
+        max-height: calc(38rem - 2.5rem); 
+        scrollbar-gutter: stable;
+    }
+
+    .users-table thead tr {
+        display: block;
+    }
+
+    .users-table tbody td {
+        width: 10rem;
+    }
+
+        .users-table tbody td:first-child {
+            width: 25%;
+        }
+
+        .users-table tbody td:nth-child(2) {
+            width: 18%;
+        }
+
+        .users-table tbody td:nth-child(3) {
+            width: 18%;
+        }
+
+        .users-table tbody td:nth-child(4) {
+            width: 18%;
+        }
+
+        .users-table tbody td:nth-child(5) {
+            width: 18%;
+        }
+
+    .users-table th:first-child {
+        padding-left: 1rem;
+    }
+
+.users-table-inner-container {
+    max-height: 38rem;
+    overflow: visible;
+}
+
+.users-table-icon {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.375rem 0;
+    margin-right: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 624.9375rem;
+    border: 0.75px solid #E9EAEB;
+    background: var(--background-secondary);
+    color: var(--text-icons-quaternary, #717680);
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+.users-table-row-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+    .users-table-row-info h4 {
+        color: var(--text-primary);
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+    }
+
+    .users-table-row-info h5 {
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+    }
+
+.users-table-button {
+    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-primary);
+    border-radius: 0.5rem;
+    border: none;
+}
+
+    .users-table-button:hover {
+        cursor: pointer;
+        background: var(--border-primary);
+    }
+
+    .users-table-button:focus-visible {
+        outline: 2px solid var(--brand-primary);
+        cursor: pointer;
+        background: var(--background-secondary);
+    }
+
+.users-table-row {
+    color: #535862;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.users-table-0 {
+    width: fit-content;
+}
+
+.users-table-row-clickable {
+    cursor: pointer;
+}
+
+tr:hover td, tr:hover .kebab-menu-trigger-button {
+    background: #FAFAFA;
+}
+
+    tr:hover .kebab-menu-trigger-button:hover {
+        background: var(--border-primary);
+    }
+
+.users-table-row-1 {
+    padding: 0.5rem 1rem;
+}
+
+.users-table-row-bottom {
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.users-table-pending-pill {
+    border-radius: 624.9375rem;
+    border: 1px solid #FEDF89;
+    background: #FFFAEB;
+    display: flex;
+    padding: 0.25rem 0.5rem 0.25rem 0.375rem;
+    align-items: center;
+    gap: 0.25rem;
+    height: 1.5rem;
+    width: 7rem;
+    color: #B54708;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+}
+
+.users-table-spinner {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #edf2f7;
+    animation: spin 1s linear infinite;
+    fill: #2563eb;
+}
+
+.users-table-loading {
+    padding: 3rem 3rem 3rem 3rem;
+    width: 111.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-expanded .users-table-loading {
+    padding: 3rem 3rem 3rem 3rem;
+    width: 99rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Users Table Access pills START */
+.users-table-access {
+    display: flex;
+    padding: 0.125rem 0.375rem;
+    align-items: center;
+    border-radius: 0.375rem;
+    border: 1px solid #D5D7DA;
+    background: var(--background-primary);
+    box-shadow: 0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+    width: fit-content;
+    background-color: var(--background-primary);
+}
+
+.users-table-access-standard {
+    color: #414651;
+}
+
+.users-table-access-admin {
+    color: #079455;
+}
+
+.users-table-pending-with-action {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
