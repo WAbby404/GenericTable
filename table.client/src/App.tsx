@@ -39,6 +39,21 @@ function App() {
             },
             vaccination: undefined
         },
+        {
+            id: 2,
+            name: "Pembroke Welsh Corgi",
+            origin: "Wales",
+            weight: 25,
+            isHypoallergenic: false,
+            traits: ["Friendly", "Diligent", "Silly"],
+            registeredDate: new Date("2020-01-15"),
+            image: null,
+            temperament: {
+                friendly: 5,
+                protective: 3,
+            },
+            vaccination: undefined
+        },
     ];
 
     const columns: Column<DogBreed>[] = [
@@ -46,6 +61,7 @@ function App() {
             key: 'id',
             header: 'ID',
             sortable: true,
+            width: '100px'
         },
         {
             key: 'name',
@@ -56,24 +72,28 @@ function App() {
             key: 'origin',
             header: 'Origin',
             sortable: true,
+            width: '100px'
         },
         {
             key: 'weight',
             header: 'Weight',
             sortable: true,
             render: (value) => `${value} kg`,
+            width: '100px'
         },
         {
             key: 'isHypoallergenic',
             header: 'Hypoallergenic',
             sortable: true,
             render: (value) => value ? 'Yes' : 'No',
+            width: '100px'
         },
         {
             key: 'traits',
             header: 'Traits',
             sortable: false,
             render: (value) => (value as string[])?.join(', ') ?? 'N/A',
+            width: '200px'
         },
         {
             key: 'registeredDate',
@@ -86,6 +106,7 @@ function App() {
             header: 'Image',
             sortable: true,
             render: (value) => (value as string) ?? 'No image',
+            width: '100px'
         },
         {
             key: 'temperament',
@@ -105,8 +126,8 @@ function App() {
       
     }
 
-    const keyExtractor = () => {
-        return ''
+    const keyExtractor = (row: DogBreed) => {
+        return `${row.id}`
     }
 
   return (

@@ -15,7 +15,6 @@ Three Props are required for your Table:
 		+ header - a string of what you want the header to display
 3. keyExtractor - returns a unique key for rows
 
-'''
 ---- Basic Example ----
 import Table from './Table/Table';
 import type { Column } from './Table/Table.types';
