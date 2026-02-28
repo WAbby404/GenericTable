@@ -1,6 +1,6 @@
 import './App.css'
 import Table from './Table/Table';
-import type { Column, TableProps } from './Table.types';
+import type { Column } from './Table/Table.types';
 
 
 export interface Temperament {

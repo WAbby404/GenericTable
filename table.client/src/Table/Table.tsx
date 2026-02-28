@@ -1,5 +1,5 @@
 import type React from 'react';
-import { type TableProps, type Column } from '../Table.types';
+import { type TableProps, type Column } from './Table.types';
 
 function Table<T>({ data, columns, onRowClick, keyExtractor }: TableProps<T>) {
     return (
