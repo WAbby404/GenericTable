@@ -1,5 +1,5 @@
 import type React from 'react';
-import { type TableProps, type Column } from './Table.types';
+import { type TableProps, type Column } from '../Table.types';
 
 function Table<T>({ data, columns, onRowClick, keyExtractor }: TableProps<T>) {
     return (
@@ -23,7 +23,7 @@ function Table<T>({ data, columns, onRowClick, keyExtractor }: TableProps<T>) {
                         key={keyExtractor(row)}
                         onClick={() => onRowClick?.(row)}
                     >
-                        {columns.map((column, index) => {
+                        {columns.map((column: Column<T>, index: number) => {
                             const value = row[column.key as keyof T];
                             return (
                                 <td key={index}>

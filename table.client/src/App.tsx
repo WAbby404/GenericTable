@@ -1,6 +1,6 @@
 import './App.css'
 import Table from './Table/Table';
-import type { Column } from './Table.types';
+import type { Column, TableProps } from './Table.types';
 
 
 export interface Temperament {
@@ -61,48 +61,48 @@ function App() {
             key: 'weight',
             header: 'Weight',
             sortable: true,
-            render: (row) => `${row.weight} kg`,
+            render: (value) => `${value} kg`,
         },
         {
             key: 'isHypoallergenic',
             header: 'Hypoallergenic',
             sortable: true,
-            render: (row) => row.isHypoallergenic ? 'Yes' : 'No',
+            render: (value) => value ? 'Yes' : 'No',
         },
         {
             key: 'traits',
             header: 'Traits',
             sortable: false,
-            render: (row) => row.traits?.join(', ') ?? 'N/A',
+            render: (value) => (value as string[])?.join(', ') ?? 'N/A',
         },
         {
             key: 'registeredDate',
             header: 'Registered Date',
             sortable: true,
-            render: (row) => row.registeredDate?.toLocaleDateString() ?? 'N/A',
+            render: (value) => (value as Date)?.toLocaleDateString() ?? 'N/A',
         },
         {
             key: 'image',
             header: 'Image',
             sortable: true,
-            render: (row) => row.image ?? 'No image',
+            render: (value) => (value as string) ?? 'No image',
         },
         {
             key: 'temperament',
             header: 'Temperament',
             sortable: false,
-            render: (row) => `Friendly: ${row.temperament.friendly}/5, Protective: ${row.temperament.protective}/5`,
+            render: (_value, row) => `Friendly: ${row.temperament.friendly}/5, Protective: ${row.temperament.protective}/5`,
         },
         {
             key: 'vaccination',
             header: 'Vaccination',
             sortable: true,
-            render: (row) => row.vaccination ?? 'N/A',
+            render: (value) => (value as string) ?? 'N/A',
         },
     ];
 
     const handleRowClick = () => {
-
+      
     }
 
     const keyExtractor = () => {
